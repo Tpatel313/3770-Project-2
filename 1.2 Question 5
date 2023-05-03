@@ -1,0 +1,9 @@
+import numpy as np
+
+def negative_binomial_moments(X):
+    # Estimate p and r using moment estimation technique
+    mean = np.mean(X)
+    var = np.var(X)
+    p = mean / var
+    r = mean * (1 - p) / p
+    return r, p
